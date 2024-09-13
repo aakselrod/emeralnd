@@ -1,0 +1,237 @@
+{
+  "mod_elements": [
+    {
+      "name": "SatsToEmeralds",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sats_to_emeralds",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/world/inventory/SatsToEmeraldsMenu.java",
+          "src/main/java/net/mcreator/emeralnd/client/gui/SatsToEmeraldsScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "SatsToEmeraldsOpened",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sats_to_emeralds_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/procedures/SatsToEmeraldsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WanderingBitcoiner",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wandering_bitcoiner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/emeralnd/neoforge/biome_modifier/wandering_bitcoiner_biome_modifier.json",
+          "src/main/resources/assets/emeralnd/models/item/wandering_bitcoiner_spawn_egg.json",
+          "src/main/java/net/mcreator/emeralnd/entity/WanderingBitcoinerEntity.java",
+          "src/main/java/net/mcreator/emeralnd/client/renderer/WanderingBitcoinerRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "WanderingBitcoinerNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wandering_bitcoiner_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/procedures/WanderingBitcoinerNaturalEntitySpawningConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SatsToEmeraldsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sats_to_emeralds_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/procedures/SatsToEmeraldsOpenTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SatsToEmeraldsClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sats_to_emeralds_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/procedures/SatsToEmeraldsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetInvoiceTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_invoice_timer",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/procedures/GetInvoiceTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetInvoiceTimerText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_invoice_timer_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/procedures/GetInvoiceTimerTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AddInvoice",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_invoice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/emeralnd/procedures/AddInvoiceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "player_invoice",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "player_invoice_expiration",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "player_invoice_hash",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.emeralnd.sats_to_emeralds.label_0100": "01:00",
+      "gui.emeralnd.sats_to_emeralds.label_trade_sats_for_emeralds": "Trade Sats for Emeralds",
+      "entity.emeralnd.wandering_bitcoiner": "Wandering Bitcoiner",
+      "item.emeralnd.wandering_bitcoiner_spawn_egg": "Wandering Bitcoiner Spawn Egg",
+      "gui.emeralnd.sats_to_emeralds.bolt11_invoice": ""
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "emeralnd",
+    "modName": "EmeraLND",
+    "version": "1.0.0",
+    "author": "alex, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.20.6",
+    "modElementsPackage": "net.mcreator.emeralnd"
+  },
+  "mcreatorVersion": 202400232117
+}

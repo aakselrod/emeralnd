@@ -1,0 +1,7 @@
+{
+  "_fv": 66,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable type=\"Number\" id=\"timeLeft\">timeLeft</variable></variables><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_number\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:timeLeft</field><value name=\"VAL\"><block type=\"math_dual_ops\"><field name=\"OP\">DIVIDE</field><value name=\"A\"><block type=\"procedure_retval_number\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"procedure\">GetInvoiceTimer</field></block></value><value name=\"B\"><block type=\"math_number\"><field name=\"NUM\">1000</field></block></value></block></value><next><block type=\"java_code\"><field name=\"CODE\">java.text.DecimalFormat df = new java.text.DecimalFormat(\"00\");&amp;#10;&amp;#10;df.setRoundingMode(java.math.RoundingMode.DOWN);</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"java_code_get\"><field name=\"CODE\">df.format(timeLeft/60) + \":\" + df.format(timeLeft%60)</field></block></value></block></next></block></next></block></next></block></xml>"
+  }
+}

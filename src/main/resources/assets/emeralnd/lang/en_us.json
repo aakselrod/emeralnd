@@ -1,0 +1,7 @@
+{
+  "gui.emeralnd.sats_to_emeralds.label_0100": "01:00",
+  "gui.emeralnd.sats_to_emeralds.label_trade_sats_for_emeralds": "Trade Sats for Emeralds",
+  "entity.emeralnd.wandering_bitcoiner": "Wandering Bitcoiner",
+  "item.emeralnd.wandering_bitcoiner_spawn_egg": "Wandering Bitcoiner Spawn Egg",
+  "gui.emeralnd.sats_to_emeralds.bolt11_invoice": ""
+}
